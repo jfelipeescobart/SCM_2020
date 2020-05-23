@@ -1,0 +1,17 @@
+
+COMANDO certUtil -hashfile archivo_semilla.txt
+Huella 1 con el algoritmo de SHA1
+daa79e45d25896b029268c5d277f5ed75d06de50
+
+COMANDO certUtil -hashfile archivo_semilla.txt SHA512
+Huella 1 con el algoritmo de SHA512
+be7f5b013d519a717f51e13fde4efa0b6d989d6c255099cf4d07b910b0268fdc1c188effdcc976c4f8bdea778ae93f7d90e25c8bee898b8eaa39bef44802325c
+
+GUARDAR HUELLA EN archivo 
+certUtil -hashfile archivo_semilla.txt SHA256 | findstr /v hash > huella1.txt
+
+COMPARAR DOS ARCHIVOS
+fc /L huella1.txt huella2.txt
+
+comamdo para comprimir en JAVA
+jar cfv folder_huellas.zip folder_huellas
